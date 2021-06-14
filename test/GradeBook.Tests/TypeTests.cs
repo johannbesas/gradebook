@@ -107,6 +107,5 @@ namespace GradeBook.Tests
         {
             return new Book(name);
         }
-
     }
 }

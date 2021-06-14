@@ -22,5 +22,20 @@ namespace GradeBook.Tests
             Assert.Equal(90.5, result.High, 1);
             Assert.Equal(77.3, result.Low, 1);
         }
+
+        [Fact]
+        public void AddGradeWillOnlyAcceptInt()
+        {
+            var book = new Book("");
+            book.AddGrade(101);
+            book.AddGrade(-1);
+            book.AddGrade(100);
+
+            var result = book.GetStatistics();
+            Assert.Equal(100, result.Average, 1);
+            Assert.Equal(90.5, result.High, 1);
+            Assert.Equal(77.3, result.Low, 1);
+
+        }
     }
 }
