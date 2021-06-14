@@ -21,6 +21,7 @@ namespace GradeBook.Tests
             Assert.Equal(85.6, result.Average, 1);
             Assert.Equal(90.5, result.High, 1);
             Assert.Equal(77.3, result.Low, 1);
+            Assert.Equal('B', result.Letter);
         }
 
         [Fact]
@@ -33,8 +34,8 @@ namespace GradeBook.Tests
 
             var result = book.GetStatistics();
             Assert.Equal(100, result.Average, 1);
-            Assert.Equal(90.5, result.High, 1);
-            Assert.Equal(77.3, result.Low, 1);
+            Assert.Equal(100, result.High, 1);
+            Assert.Equal(100, result.Low, 1);
 
         }
     }
