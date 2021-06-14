@@ -28,8 +28,8 @@ namespace GradeBook.Tests
         public void AddGradeWillOnlyAcceptInt()
         {
             var book = new Book("");
-            book.AddGrade(101);
-            book.AddGrade(-1);
+            //book.AddGrade(101);
+            //book.AddGrade(-1);
             book.AddGrade(100);
 
             var result = book.GetStatistics();
